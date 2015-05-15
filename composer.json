@@ -1,0 +1,22 @@
+{
+  "name": "rhubarbphp/scaffold-saved-tabs",
+  "description": "Provides a search panel presenter which allows users to save searches as remembered tabs",
+  "keywords": [ "saved", "tab", "search", "rhubarb", "php", "framework" ],
+  "homepage": "http://www.rhubarbphp.com/",
+  "license": "Apache-2.0",
+  "autoload": {
+    "psr-4": {
+      "Rhubarb\\Scaffolds\\SavedTabs\\": "src/",
+      "Rhubarb\\Scaffolds\\SavedTabs\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "rhubarbphp/rhubarb": "dev-develop",
+    "rhubarbphp/module-stem": "dev-develop",
+    "rhubarbphp/module-leaf": "dev-develop",
+    "rhubarbphp/scaffold-authentication-with-roles": "dev-develop"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.*"
+  }
+}
