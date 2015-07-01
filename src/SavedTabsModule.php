@@ -33,7 +33,7 @@ class SavedTabsModule extends Module
 
     public function initialise()
     {
-        SolutionSchema::registerSchema("SavedTabs", 'Gcd\Core\Scaffolds\SavedTabs\SavedTabsSchema');
+        SolutionSchema::registerSchema("SavedTabs", SavedTabsSchema::class);
     }
 
     protected function registerDependantModules()
