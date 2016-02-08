@@ -20,8 +20,8 @@ namespace Rhubarb\Scaffolds\SavedTabs;
 
 use Rhubarb\Stem\Models\Model;
 use Rhubarb\Stem\Repositories\MySql\Schema\Columns\MySqlMediumText;
-use Rhubarb\Stem\Schema\Columns\AutoIncrement;
-use Rhubarb\Stem\Schema\Columns\Integer;
+use Rhubarb\Stem\Schema\Columns\AutoIncrementColumn;
+use Rhubarb\Stem\Schema\Columns\IntegerColumn;
 use Rhubarb\Stem\Schema\Columns\StringColumn;
 use Rhubarb\Stem\Schema\ModelSchema;
 
@@ -32,9 +32,9 @@ class TabDefinition extends Model
         $schema = new ModelSchema("tblTabDefinition");
 
         $schema->addColumn(
-            new AutoIncrement("TabDefinitionID"),
-            new Integer("UserID"),
-            new Integer("GroupID"),
+            new AutoIncrementColumn("TabDefinitionID"),
+            new IntegerColumn("UserID"),
+            new IntegerColumn("GroupID"),
             new StringColumn("TabSetName", 50),
             new StringColumn("TabName", 50),
             new MySqlMediumText("TabSettings")
