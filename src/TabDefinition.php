@@ -22,7 +22,7 @@ use Rhubarb\Stem\Models\Model;
 use Rhubarb\Stem\Repositories\MySql\Schema\Columns\MySqlMediumText;
 use Rhubarb\Stem\Schema\Columns\AutoIncrement;
 use Rhubarb\Stem\Schema\Columns\Integer;
-use Rhubarb\Stem\Schema\Columns\String;
+use Rhubarb\Stem\Schema\Columns\StringColumn;
 use Rhubarb\Stem\Schema\ModelSchema;
 
 class TabDefinition extends Model
@@ -35,8 +35,8 @@ class TabDefinition extends Model
             new AutoIncrement("TabDefinitionID"),
             new Integer("UserID"),
             new Integer("GroupID"),
-            new String("TabSetName", 50),
-            new String("TabName", 50),
+            new StringColumn("TabSetName", 50),
+            new StringColumn("TabName", 50),
             new MySqlMediumText("TabSettings")
         );
 
