@@ -19,7 +19,7 @@
 namespace Rhubarb\Scaffolds\SavedTabs;
 
 use Rhubarb\Stem\Models\Model;
-use Rhubarb\Stem\Repositories\MySql\Schema\Columns\MySqlMediumText;
+use Rhubarb\Stem\Repositories\MySql\Schema\Columns\MySqlMediumTextColumn;
 use Rhubarb\Stem\Schema\Columns\AutoIncrementColumn;
 use Rhubarb\Stem\Schema\Columns\IntegerColumn;
 use Rhubarb\Stem\Schema\Columns\StringColumn;
@@ -37,7 +37,7 @@ class TabDefinition extends Model
             new IntegerColumn("GroupID"),
             new StringColumn("TabSetName", 50),
             new StringColumn("TabName", 50),
-            new MySqlMediumText("TabSettings")
+            new MySqlMediumTextColumn("TabSettings")
         );
 
         return $schema;
