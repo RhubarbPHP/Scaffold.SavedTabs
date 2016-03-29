@@ -38,6 +38,6 @@ class SavedTabsModule extends Module
 
     protected function registerDependantModules()
     {
-        Module::RegisterModule(new AuthenticationWithRolesModule());
+        Module::registerModule(new AuthenticationWithRolesModule());
     }
 }

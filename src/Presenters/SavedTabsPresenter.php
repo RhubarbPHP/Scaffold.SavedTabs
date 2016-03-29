@@ -41,7 +41,7 @@ class SavedTabsPresenter extends SearchPanelTabsPresenter
             $tabs[] = new SearchPanelTabDefinition($tabDefinition->TabName, json_decode($tabDefinition->TabSettings, true));
         }
 
-        $parentTabs = parent::InflateTabDefinitions();
+        $parentTabs = parent::inflateTabDefinitions();
 
         $tabs = array_merge($parentTabs, $tabs);
 
@@ -71,7 +71,7 @@ class SavedTabsPresenter extends SearchPanelTabsPresenter
             $tab->TabSetName = $this->_tabSetName;
             $tab->TabName = $tabName;
             $tab->TabSettings = $tabSettings;
-            $tab->Save();
+            $tab->save();
 
             $this->rePresent();
         });
